@@ -6,10 +6,14 @@ steps:
 - name: build
   image: node
   environment:
-    aws_account:
+    # 自行設定 env
+    SERVER: "test.com"
+    TELEGRAM_ID: # 從 secret 中拿到 TELEGRAM_ID 內容
+      from_secret: TELEGRAM_ID
+    TOKEN:
       from_secret: aws_account
   commands: # DRONE_BRANCH 為 drone 預設建立的環境變數, 可參考官方文檔
-  - "echo ${aws_account}"
+  - "echo server is ${SERVER}, token is ${TOKEN}, branch is ${DRONE_BRANCH}"
 
 # kind: pipeline
 # name: default
