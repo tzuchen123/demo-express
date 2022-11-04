@@ -1,0 +1,1 @@
+deploy to aws fargate via drone
