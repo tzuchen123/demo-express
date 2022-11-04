@@ -9,7 +9,7 @@ steps:
     aws_account:
       from_secret: aws_account
   commands: # DRONE_BRANCH 為 drone 預設建立的環境變數, 可參考官方文檔
-  - "echo {aws_account}"
+  - "echo ${aws_account}"
 
 # kind: pipeline
 # name: default
