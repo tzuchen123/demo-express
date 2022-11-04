@@ -6,4 +6,4 @@ steps:
 - name: build
   image: node
   commands:
-  - echo 'test'
+  - echo $aws_account
